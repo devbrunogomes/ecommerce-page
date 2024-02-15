@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <S.StyledHeader>
       <S.Wrapper>
-        <S.HeaderTitle>My Shop</S.HeaderTitle>
+        <S.HeaderTitle>My Shop.</S.HeaderTitle>
 
         <S.ButtonsWrapper>
           <S.AuthButton>

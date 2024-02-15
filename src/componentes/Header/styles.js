@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   align-items: center;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem;
   height: 3rem;
 `;
 
