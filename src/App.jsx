@@ -1,6 +1,6 @@
 
 import { Header } from "./componentes/Header/Header";
-import { ProductCard } from "./componentes/ProductCard/ProductCard";
+import { ProductsList } from "./componentes/Products List/ProductsList";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 
@@ -10,7 +10,7 @@ function App() {
     <>     
       <Header/>
 
-      <ProductCard/>
+      <ProductsList/>
       {/* Aqui eu importo para o App os estilos globais */}
       <GlobalStyles />
     </>
