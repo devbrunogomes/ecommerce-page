@@ -30,7 +30,7 @@ export const AuthButton = styled.button`
   border-radius: 0.6rem;
   height: 2.5rem;
   padding: 0 1rem;
-  background-color: green;
+  background-color: ${(props) => props.isLogged ? 'red' : 'green'};
   color: white;
   font-size: 1rem;
   display: flex;
