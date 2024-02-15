@@ -1,9 +1,11 @@
+import { useState } from "react";
 import * as S from "./styles";
 import { FiLogIn, FiLogOut, FiShoppingCart } from "react-icons/fi";
+import { Cart } from "../Cart/Cart";
 
 export const Header = () => {
   //Estado para controlar a exibição do carrinho
-
+  const [showCart, setShowCart] = useState(false);
 
   const isLogged = true;
 
@@ -20,12 +22,19 @@ export const Header = () => {
             {isLogged ? <FiLogOut /> : <FiLogIn />}
           </S.AuthButton>
 
-          <S.CartButton>
+          <S.CartButton
+            //Ao clicar no botao, um toggle vai ser acionado, pra exibir ou esconder uma aba lateral
+            onClick={() => {
+              setShowCart(!showCart);
+            }}
+          >
             Carrinho
             <FiShoppingCart />
           </S.CartButton>
         </S.ButtonsWrapper>
       </S.Wrapper>
+      {/* Vou passar uma propriedade pra esse componente, com o valor da minha variavel.  */}
+      <Cart showCart={showCart}/>
     </S.StyledHeader>
   );
 };
