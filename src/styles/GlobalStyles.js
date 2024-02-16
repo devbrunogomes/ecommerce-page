@@ -16,4 +16,15 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: #f5f5f5;
   }
+
+  //Para aparecer a maozinha ao colocar o mouse em cima
+  button {
+    cursor: pointer;
+    transition: filter 0.3s;
+
+    &:hover{
+      filter: brightness(1.2);
+      transition: filter 0.3s;
+    }
+  }
 `
