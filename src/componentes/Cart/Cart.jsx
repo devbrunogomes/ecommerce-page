@@ -7,11 +7,12 @@ import { removeProduct } from "../../redux/CartReducer/cart-slice";
 export const Cart = (props) => {
   //Trazer o estado do carrinho de dentro do reducer
   const { cart } = useSelector((rootReducer) => rootReducer.cartReducer);
-
+ 
   //Variavel para armazenar o total do carrinho
   const total = cart.reduce((totalCart, product) => {
     return totalCart + product.price;
   }, 0);
+  const totalFixed = total.toFixed(2)
 
   const dispatch = useDispatch()
 
@@ -34,7 +35,7 @@ export const Cart = (props) => {
         })}
       </S.CartProductsList>
 
-      <S.CartTotal>Total: <strong>${total}</strong></S.CartTotal>
+      <S.CartTotal>Total: <strong>${totalFixed}</strong></S.CartTotal>
     </S.Conteiner>
   );
 };
