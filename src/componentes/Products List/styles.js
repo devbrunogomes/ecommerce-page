@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 export const Container = styled.main`
-  max-width: 1240px;
+  max-width: 1100px;
   height: 100%;
-  margin: 4rem auto;
+  margin: 6rem auto 3rem auto;
   padding: 0 2rem;
 
   display: flex;

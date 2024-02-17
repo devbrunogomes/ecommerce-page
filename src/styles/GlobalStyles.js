@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #f5f5f5;
+    background-color: whitesmoke;
   }
 
   //Para aparecer a maozinha ao colocar o mouse em cima

@@ -61,9 +61,9 @@ export const AddToCartButton = styled.button`
   border: none;
   border-radius: 0.6rem;
   height: 2.5rem;
-  background-color: navy;
-  color: white;
-  font-size: 1rem;
+  background-color: #A9D6E5;
+  color: black;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,14 +80,15 @@ export const RemoveFromCartButton = styled.button`
   border: none;
   border-radius: 0.6rem;
   height: 2.5rem;
-  background-color: violet;
+  background-color: #C4C5BA;
   color: black;
-  font-size: 1rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+ 
 
   //Para acessar o icone trazido da lib, eu aninho um svg, já que no html, esse incone é um svg
   svg {
