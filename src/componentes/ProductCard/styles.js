@@ -47,7 +47,9 @@ export const Review = styled.span`
   }
 `;
 
-export const Price = styled.strong``;
+export const Price = styled.strong`
+  font-size: 1.3rem;
+`;
 
 export const AddToCartButtonWrapper = styled.div`
   display: flex;
@@ -61,7 +63,7 @@ export const AddToCartButton = styled.button`
   border: none;
   border-radius: 0.6rem;
   height: 2.5rem;
-  background-color: #A9D6E5;
+  background-color: #a9d6e5;
   color: black;
   font-size: 1.3rem;
   display: flex;
@@ -80,7 +82,7 @@ export const RemoveFromCartButton = styled.button`
   border: none;
   border-radius: 0.6rem;
   height: 2.5rem;
-  background-color: #C4C5BA;
+  background-color: #c4c5ba;
   color: black;
   font-size: 1.3rem;
   display: flex;
@@ -88,7 +90,6 @@ export const RemoveFromCartButton = styled.button`
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
- 
 
   //Para acessar o icone trazido da lib, eu aninho um svg, já que no html, esse incone é um svg
   svg {

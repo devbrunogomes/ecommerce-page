@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 
 const initialState = {
-  isOpen: false //Ou seja, o carrinho não está sendo exibido
+  showCart: false //Ou seja, o carrinho não está sendo exibido
 }
 
 export const showCartSlice = createSlice({
@@ -10,14 +10,12 @@ export const showCartSlice = createSlice({
   initialState,
   //Nome do Reducer:
   name: 'showCart',
+  //cada reducer vai lidar com um action
   reducers: {
-    open: (state, action) => {
-      state.isOpen = true
-    },
-    close: (state, action) => {
-      state.isOpen = false
+    toggleShowCart: (state, action) => {
+      state.showCart = !state.showCart
     },
   }
 })
 
-export const {close, open} = showCartSlice.actions
+export const {close, toggleShowCart} = showCartSlice.actions

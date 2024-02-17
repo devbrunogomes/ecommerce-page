@@ -11,11 +11,29 @@ export const Conteiner = styled.aside`
   padding: 2rem;
   box-shadow: -5px 0 1.5rem rgba(0, 0, 0, 0.25);
   transition: 0.6s ease;
+  overflow: auto;
 `;
+
+export const TitleAndCloseButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
 
 export const Title = styled.h1`
   font-size: 3rem;
 `;
+
+export const CloseCart = styled.a`
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    font-size: 1.9rem;
+  }
+`
 
 export const CartProductsList = styled.ul`
   padding: 2rem 0;
