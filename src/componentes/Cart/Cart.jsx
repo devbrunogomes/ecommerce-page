@@ -1,6 +1,8 @@
 //A janela do Carrinho que vai abrir lateralmente
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as S from "./styles";
+import { IoMdRemoveCircle } from "react-icons/io";
+import { removeProduct } from "../../redux/CartReducer/cart-slice";
 
 export const Cart = (props) => {
   //Trazer o estado do carrinho de dentro do reducer
@@ -8,8 +10,10 @@ export const Cart = (props) => {
 
   //Variavel para armazenar o total do carrinho
   const total = cart.reduce((totalCart, product) => {
-    return totalCart + product.price
-  }, 0)
+    return totalCart + product.price;
+  }, 0);
+
+  const dispatch = useDispatch()
 
   return (
     <S.Conteiner showCart={props.showCart}>
@@ -20,15 +24,17 @@ export const Cart = (props) => {
         {cart.map((product) => {
           return (
             <S.CartProductItem key={product.id}>
-              <strong>{product.title}</strong> - ${product.price}
+              <S.TitleAndPriceWrapper><S.ItemTitle>{product.title}</S.ItemTitle> ${product.price}</S.TitleAndPriceWrapper>
+              
+              <S.RemoveItemFromCart onClick={() => dispatch(removeProduct(product))}>
+                <IoMdRemoveCircle />
+              </S.RemoveItemFromCart>
             </S.CartProductItem>
           );
         })}
       </S.CartProductsList>
 
-      <S.CartTotal>
-        Total: ${total}
-      </S.CartTotal>
+      <S.CartTotal>Total: <strong>${total}</strong></S.CartTotal>
     </S.Conteiner>
   );
 };

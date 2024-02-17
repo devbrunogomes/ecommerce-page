@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as S from "./styles";
 import { FiLogIn, FiLogOut, FiShoppingCart } from "react-icons/fi";
 import { Cart } from "../Cart/Cart";
+import { login, logout } from "../../redux/UserReducer/user-slice";
 
 export const Header = () => {
   //o useSelector é a forma que eu acesso um reducer. Eu tenho que passar uma funçao, com o rootReducer como parametro.
@@ -10,7 +11,7 @@ export const Header = () => {
   const { user } = useSelector((rootReducer) => rootReducer.userReducer);
 
   //Hook para enviar uma action
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); //Com o toolkit o dispatch nao muda, o que vai mudar é a forma que usamos ele
 
   //Estado para controlar a exibição do carrinho
   const [showCart, setShowCart] = useState(false);
@@ -22,17 +23,12 @@ export const Header = () => {
     //se usuário nao está logado. o user será null (como informado lá no reducer)
     if (user === null) {
       //despachar uma action de login. Como parametro eu passo um objeto com duas props: type e payload
-      dispatch({
-        type: "user/login",
-        payload: {
-          name: "Bruno Gomes",
-          email: "brunogomes@email.com",
-        },
-      });
+      dispatch(login({payload: {
+        name: "Bruno Gomes",
+        email: "brunogomes@email.com",
+      }}))
     } else {
-      dispatch({
-        type: "user/logout",
-      });
+      dispatch(logout({}))
     }
   }
 

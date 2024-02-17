@@ -2,6 +2,10 @@ import * as S from "./styles.js";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  addProduct,
+  removeProduct,
+} from "../../redux/CartReducer/cart-slice.js";
 
 export const ProductCard = ({ id, image, description, title, rate, price }) => {
   //Pra trazer o estado do carrinho
@@ -18,19 +22,13 @@ export const ProductCard = ({ id, image, description, title, rate, price }) => {
   //Funçao para lidar com o click no botao de adicionar ao carrinho
   function handleAddProductToCart() {
     //despachar a action de adicionar ao carrinho
-    dispatch({
-      type: "cart/add-product",
-      payload: { id, image, description, title, rate, price },
-    });
+    dispatch(addProduct({ id, image, description, title, rate, price }));
   }
 
   //------------------------------------------------------------------------------
   //Funçao para lidar com o click no botao de remover ao carrinho
-  function handleRemoveProductFromCart() {
-    dispatch({
-      type: "cart/remove-product",
-      payload: { id, image, description, title, rate, price },
-    });
+  function handleRemoveProductFromCart() {   
+    dispatch(removeProduct({ id, image, description, title, rate, price }));
   }
 
   //------------------------------------------------------------------------------

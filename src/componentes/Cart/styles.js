@@ -27,6 +27,37 @@ export const CartProductsList = styled.ul`
   gap: 1rem;
 `;
 
-export const CartProductItem = styled.li``;
+export const CartProductItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-export const CartTotal = styled.strong``
+export const TitleAndPriceWrapper = styled.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+`
+
+export const ItemTitle = styled.strong`
+  font-size: 1.3rem;
+`;
+
+export const RemoveItemFromCart = styled.a`
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    font-size: 1.5rem;
+  }
+`;
+
+export const CartTotal = styled.h3`
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+`;
