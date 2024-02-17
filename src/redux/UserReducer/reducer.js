@@ -3,7 +3,7 @@
 
 //Estado para guardar as informaçoes do usuário
 
-//estado inicial pra quando a aplicacao inicar
+//estado inicial pra quando a aplicacao inicar. ***TODO ESTADO INICIAL É UM OBJETO***
 const initialState = {
   user: null,
 };

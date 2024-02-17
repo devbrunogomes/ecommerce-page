@@ -11,6 +11,7 @@ export const ProductsList = () => {
         return (
           <ProductCard
             key={item.id}
+            id={item.id}
             image={item.image}
             description={item.description}
             title={item.title}
