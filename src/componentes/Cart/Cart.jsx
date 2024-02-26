@@ -55,9 +55,11 @@ export const Cart = (props) => {
         Total: <strong>${totalFixed}</strong>
       </S.CartTotal>
 
-      <S.ClearCartButton onClick={() => {
-        dispatch(clearCart({}))
-      }}>
+      <S.ClearCartButton total={totalFixed}
+        onClick={() => {
+          dispatch(clearCart({}));
+        }}
+      >
         Esvaziar Carrinho <AiTwotoneDelete />
       </S.ClearCartButton>
     </S.Conteiner>
