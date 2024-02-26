@@ -78,3 +78,14 @@ export const CartTotal = styled.h3`
   display: flex;
   justify-content: space-between;
 `;
+
+export const ClearCartButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  width: 100%;
+  margin-top: 1rem ;
+  background-color: white;
+  border-radius: 0.6rem;
+`

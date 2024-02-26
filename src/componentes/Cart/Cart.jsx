@@ -2,9 +2,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import * as S from "./styles";
 import { IoMdRemoveCircle } from "react-icons/io";
-import { removeProduct } from "../../redux/CartReducer/cart-slice";
+import { clearCart, removeProduct } from "../../redux/CartReducer/cart-slice";
 import { IoCloseSharp } from "react-icons/io5";
 import { toggleShowCart } from "../../redux/ShowCartReducer/showCart-slice";
+import { AiTwotoneDelete } from "react-icons/ai";
 
 export const Cart = (props) => {
   //Trazer o estado do carrinho de dentro do reducer
@@ -22,7 +23,11 @@ export const Cart = (props) => {
     <S.Conteiner showCart={props.showCart}>
       <S.TitleAndCloseButtonWrapper>
         <S.Title>Carrinho</S.Title>
-        <S.CloseCart onClick={() => {dispatch(toggleShowCart({}))}}>
+        <S.CloseCart
+          onClick={() => {
+            dispatch(toggleShowCart({}));
+          }}
+        >
           <IoCloseSharp />
         </S.CloseCart>
       </S.TitleAndCloseButtonWrapper>
@@ -41,7 +46,7 @@ export const Cart = (props) => {
               >
                 <IoMdRemoveCircle />
               </S.RemoveItemFromCart>
-            </S.CartProductItem> 
+            </S.CartProductItem>
           );
         })}
       </S.CartProductsList>
@@ -49,6 +54,12 @@ export const Cart = (props) => {
       <S.CartTotal>
         Total: <strong>${totalFixed}</strong>
       </S.CartTotal>
+
+      <S.ClearCartButton onClick={() => {
+        dispatch(clearCart({}))
+      }}>
+        Esvaziar Carrinho <AiTwotoneDelete />
+      </S.ClearCartButton>
     </S.Conteiner>
   );
 };

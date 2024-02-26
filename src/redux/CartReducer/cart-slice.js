@@ -31,9 +31,13 @@ export const cartSlice = createSlice({
       );     
 
       state.cart = cartFiltered   
+    },
+    //Ação para Limpar o Carrinho
+    clearCart: (state) => {
+      state.cart = []
     }
   },
 });
 
 
-export const {addProduct, removeProduct} = cartSlice.actions
+export const {addProduct, removeProduct, clearCart} = cartSlice.actions

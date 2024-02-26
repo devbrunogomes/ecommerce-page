@@ -42,7 +42,7 @@ export const Header = () => {
   return (
     <S.StyledHeader>
       <S.Wrapper>
-        <S.HeaderTitle>My Shop.</S.HeaderTitle>
+        <S.HeaderTitle>For You.</S.HeaderTitle>
 
         <S.ButtonsWrapper>
           {/* //Pra poder controlar um estilo dinamicamente, eu crio um
