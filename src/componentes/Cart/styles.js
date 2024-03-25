@@ -32,6 +32,7 @@ export const CloseCart = styled.a`
 
   svg {
     font-size: 1.9rem;
+    
   }
 `
 
