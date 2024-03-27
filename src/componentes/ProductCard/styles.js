@@ -90,6 +90,7 @@ export const RemoveFromCartButton = styled.button`
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+  
 
   //Para acessar o icone trazido da lib, eu aninho um svg, já que no html, esse incone é um svg
   svg {

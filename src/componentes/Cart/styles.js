@@ -7,7 +7,7 @@ export const Conteiner = styled.aside`
   height: 100vh;
   width: 30rem;
   background-color: white;
-  z-index: 999;
+  z-index: 9999;
   padding: 2rem;
   box-shadow: -5px 0 1.5rem rgba(0, 0, 0, 0.25);
   transition: 0.6s ease;

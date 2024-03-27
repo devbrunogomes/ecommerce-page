@@ -14,7 +14,7 @@ export const showCartSlice = createSlice({
   //cada reducer vai lidar com uma action
   reducers: {
     toggleShowCart: (state, action) => {
-      //Vai lá no estado inicial, e atribui ele um valor invertido dele mesmo.
+      //Vai lá no estado inicial, e atribui ele um valor invertido dele mesmo.c:\Users\bsgom\Downloads\cart-shopping-fast-svgrepo-com.png
       state.showCart = !state.showCart;
     },
   },

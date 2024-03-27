@@ -7,9 +7,9 @@
 [HTML__BADGE]: https://img.shields.io/badge/HTML-fff?style=for-the-badge&logo=html5&logoColor=30A3DC
 [CSS__BADGE]: https://img.shields.io/badge/CSS3-fff?style=for-the-badge&logo=css3&logoColor=E94D5F
 [PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
-[PROJECT__URL]: https://github.com/Fernanda-Kipper/Readme-Templates
+[PROJECT__URL]: https://foryoushop.vercel.app/
 [PORTFOLIO__BADGE]: https://img.shields.io/badge/🖼PORTFOLIO-fff?style=for-the-badge&logo=project
-[PORTFOLIO__URL]: https://github.com/Fernanda-Kipper/Readme-Templates
+[PORTFOLIO__URL]: https://devbrunogomes.vercel.app/
 
 <h1 align="center" style="font-weight: bold;">To Do List 📝</h1>
 
@@ -27,13 +27,13 @@
 
 <h2 id="started">🚀 Project</h2>
 
-On the long of the day, we need a little help for to do everything what we need do. So, this application can help us in this mission. They can't do everything for us, but every little help is great.
+This is a fake e-commerce page, utilizing a database from a fake product API. It features a functional shopping cart where users can remove products, view the total, and empty the cart.
 
 [![project][PROJECT__BADGE]][PROJECT__URL]
 
 <h2 id="started">🛠 Tools used</h2>
 
-For made this app, i used some technologies. Like SCSS for styles, and, for states management i used the 'context' from React Js.
+This application is so challenging, for made this i used some technologies. Like Styled Components for styles, and, for states management i used Redux.
 
 
 <h2 id="colab">🤝 About Me</h2>
