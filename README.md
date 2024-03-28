@@ -33,7 +33,7 @@ This is a fake e-commerce page, utilizing a database from a fake product API. It
 
 <h2 id="started">🛠 Tools used</h2>
 
-This application is so challenging, for made this i used some technologies. Like Styled Components for styles, and, for states management i used Redux.
+This application is so challenging, for made this I used some technologies. Like Styled Components for styles, and, for states management I used Redux.
 
 
 <h2 id="colab">🤝 About Me</h2>
